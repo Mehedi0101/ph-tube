@@ -1,4 +1,6 @@
 const cardContainer = document.getElementById('card-container');
+let sort = false;
+
 const cardLoader = content =>{
     // card-div
     const outerDiv = document.createElement('div');
@@ -47,7 +49,7 @@ const cardLoader = content =>{
 
     // author div
     const authorDiv = document.createElement('div');
-    authorDiv.classList = `flex items-center gap-1 ml-12 my-2 text-[#171717b3] text-sm`;
+    authorDiv.classList = `flex items-center gap-1 ml-12 text-[#171717b3] text-sm`;
 
     // author div -> author name
     const authorName = document.createElement('h3');
