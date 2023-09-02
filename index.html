@@ -38,8 +38,7 @@
             <div class="flex gap-2 justify-evenly md:justify-between flex-wrap">
                 <button
                     class="bg-[#25252533] text-[#252525] text-base lg:text-lg font-medium py-2 px-5 rounded active:scale-95 transition-all md:-ml-20" id="sort-btn">Sort by view</button>
-                <button
-                    class="bg-[#FF1F3D] text-white text-base lg:text-lg font-medium py-2 px-5 rounded active:scale-95 transition-all">Blog</button>
+                <a class="bg-[#FF1F3D] text-white text-base lg:text-lg font-medium py-2 px-5 rounded active:scale-95 transition-all" href="blog.html">Blog</a>
             </div>
         </nav>
 
@@ -56,34 +55,15 @@
 
         <!-- card container -->
         <section class="w-11/12 mx-auto grid grid-cols-1 min-[500px]:grid-cols-2 min-[800px]:grid-cols-3  lg:grid-cols-4 gap-x-5 gap-y-10 mb-10" id="card-container">
-
-            <!-- card-1 -->
-
-            <!-- <div class="card rounded-none">
-                <figure class="h-48 bg-[#000000ef] rounded-lg relative">
-                        <img class="w-full" src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="" /> 
-                        <p class="bg-[#171717] text-white absolute px-2 py-1 bottom-1 right-1 text-xs rounded">3hrs 56 min ago</p>
-                </figure>
-
-                
-                <div class="flex items-center gap-2 mt-4">
-                    <img class="rounded-full w-10 h-10" src="https://i.ibb.co/D9wWRM6/olivia.jpg" alt="">
-                    <h2 class="text-base font-bold">Building a Winning UX Strategy Using the Kano Model</h2>
-                </div>
-
-                <div class="flex items-center gap-1 ml-12 my-2 text-[#171717b3] text-sm">
-                    <h3>Awlad Hossain</h3>
-                    <img src="assets/images/verified.svg" alt="">
-                </div>
-                <h3 class="ml-12 text-[#171717b3] text-sm">91K views</h3>
-            </div> -->
         </section>
 
+        <!-- no-content-error -->
         <div class="mb-20 hidden" id="no-content">
             <img class="mx-auto mb-5" src="assets/images/not-found.png" alt="">
             <p class="text-center text-[#171717] text-xl md:text-2xl lg:text-3xl font-bold">Oops!! Sorry, There is no <br> content here</p>
         </div>
     </main>
+
     <!-- scripts -->
     <script src="scripts/card-loader.js"></script>
     <script src="scripts/sorting.js"></script>
