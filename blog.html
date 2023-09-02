@@ -26,7 +26,7 @@
     </style>
 </head>
 
-<body>
+<body class="font-inter max-w-screen-2xl mx-auto overflow-y-scroll">
 
     <!-- header -->
     <header>
@@ -34,8 +34,7 @@
         <!-- navbar -->
         <nav class="w-11/12 mx-auto flex flex-wrap gap-5 justify-between items-center mt-6 max-[300px]:justify-center">
             <img src="assets/images/Logo.png" alt="">
-            <a class="bg-[#FF1F3D] text-white text-base lg:text-lg font-medium py-2 px-5 rounded active:scale-95 transition-all"
-                href="index.html">Videos</a>
+            <a class="bg-[#FF1F3D] text-white text-base lg:text-lg font-semibold py-2 px-5 rounded active:scale-95 transition-all" href="index.html">Videos</a>
         </nav>
 
     </header>
@@ -111,7 +110,7 @@
 
         <!-- blog-1 -->
         <section class="hidden" id="blog-1">
-            <h1 class="text-3xl mt-32">Scope of <span class="font-bold">var</span>, <span class="font-bold">let</span>, and
+            <h1 class="text-2xl md:text-4xl mt-32">Scope of <span class="font-bold">var</span>, <span class="font-bold">let</span>, and
                 <span class="font-bold">const</span></h1>
             <div class="flex gap-2 my-10">
                 <img class="h-12 w-12 rounded-full" src="assets/images/author-img.jpg" alt="">
@@ -120,7 +119,7 @@
                     <h3 class="font-semibold">Sept 02, 2023</h3>
                 </div>
             </div>
-            <article class="space-y-10 text-lg font-medium">
+            <article class="space-y-10 text-sm md:text-lg font-medium">
                 <p>
                     One of the features that came with ES6 is the addition of let and const, which can be used for
                     variable declaration. The question is, what makes them different from good ol' var which we've been using? If you are still not clear about this, then this article is for you. In this article, we'll discuss var, let, and const with respect to their scope.
@@ -133,7 +132,7 @@
                     available for use in the whole window. var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function. To understand further, look at the example below.
                 </p>
 
-                <p class="font-mono text-base">
+                <p class="font-mono text-xs md:text-base">
                      var greeter = "hey hi"; <br>
                     function newFunction() { <br>
                     &nbsp;&nbsp;&nbsp;var hello = "hello"; <br>
@@ -147,7 +146,7 @@
                     let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so. A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block. So a variable declared in a block with let is only available for use within that block. Let me explain this with an example:
                 </p>
 
-                <p class="font-mono text-base">
+                <p class="font-mono text-xs md:text-base">
                     let greeting = "say Hi"; <br>
                     let times = 4; <br>
                     if (times > 3) { <br>
@@ -170,7 +169,7 @@
 
         <!-- blog-2 -->
         <section class="hidden" id="blog-2">
-            <h1 class="text-3xl mt-32">Use cases of <span class="font-bold">null</span> and <span
+            <h1 class="text-4xl mt-32">Use cases of <span class="font-bold">null</span> and <span
                     class="font-bold">undefined</span></h1>
             <div class="flex gap-2 my-10">
                 <img class="h-12 w-12 rounded-full" src="assets/images/author-img.jpg" alt="">
@@ -179,7 +178,7 @@
                     <h3 class="font-semibold">Sept 01, 2023</h3>
                 </div>
             </div>
-            <article class="space-y-10 text-lg font-medium">
+            <article class="space-y-10 text-sm md:text-lg font-medium">
                 <p>
                     In JavaScript undefined and null are often used interchangeably, but they have distinct meanings and use cases. Undefined represents a variable that has been declared but has not been assigned a value. Null, on the other hand, represents a deliberate absence of any object value.
                 </p>
@@ -191,7 +190,7 @@
                     null to a variable or property to indicate that it has no object value. For example:
                 </p>
 
-                <p class="font-mono text-base">let myVar = null;</p>
+                <p class="font-mono text-xs md:text-base">let myVar = null;</p>
 
                 <p>
                     Null is commonly used in conditional statements or functions to check if a variable or property has
@@ -199,7 +198,7 @@
                     the case where the value is not present, you can check for null:
                 </p>
 
-                <p class="font-mono text-base">function printName(name = null) { <br>
+                <p class="font-mono text-xs md:text-base">function printName(name = null) { <br>
                     &nbsp;&nbsp;&nbsp;if (name !== null) { <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(name); <br>
                     &nbsp;&nbsp;&nbsp;} else { <br>
@@ -220,14 +219,14 @@
                     following code declares a variable myVar but does not assign it a value, so its value is undefined:
                 </p>
 
-                <p class="font-mono text-base"> 
+                <p class="font-mono text-xs md:text-base"> 
                     let myVar;<br>
                     console.log(myVar); // output: undefined
                 </p>
 
                 <p>You can also explicitly assign undefined to a variable or property:</p>
 
-                <p class="font-mono text-base"> 
+                <p class="font-mono text-xs md:text-base"> 
                     et myVar = undefined; <br>
                     console.log(myVar); // output: undefined
                 </p>
@@ -247,7 +246,7 @@
 
         <!-- blog-3 -->
         <section class="hidden" id="blog-3">
-            <h1 class="text-3xl mt-32">What is meant by <span class="font-bold">REST</span> API?</h1>
+            <h1 class="text-4xl mt-32">What is meant by <span class="font-bold">REST</span> API?</h1>
             <div class="flex gap-2 my-10">
                 <img class="h-12 w-12 rounded-full" src="assets/images/author-img.jpg" alt="">
                 <div class="text-[#17171793]">
@@ -255,7 +254,7 @@
                     <h3 class="font-semibold">Sept 02, 2023</h3>
                 </div>
             </div>
-            <article class="space-y-10 text-lg font-medium">
+            <article class="space-y-10 text-sm md:text-lg font-medium">
                 <p>
                     Representational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services. REST API is a way of accessing web services in a simple and flexible way without having any processing.
                 </p>

@@ -4,7 +4,6 @@ const loadContents = async(id,sortStatus) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`);
     const data = await response.json();
     let contents = data.data;
-
     const noContent = document.getElementById('no-content');
     (contents.length === 0) ? noContent.classList.remove('hidden') : noContent.classList.add('hidden');
 
