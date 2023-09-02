@@ -41,7 +41,7 @@
     </header>
 
     <main class="w-11/12 mx-auto my-10">
-        <section class="">
+        <section id="card-container">
             <h2
                 class="text-[#171717] text-2xl md:text-3xl font-bold md:font-semibold mb-5 md:mb-10 text-center md:text-left">
                 Recent Blogs</h2>
@@ -49,7 +49,7 @@
 
                 <!-- card-1 -->
                 <div title="read more"
-                    class="card bg-stone-200 shadow-xl rounded-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-all max-w-sm mx-auto md:mx-0">
+                    class="card bg-stone-200 shadow-xl rounded-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-all max-w-sm mx-auto md:mx-0" id="card-1">
                     <figure class="h-48 mt-2 p-2 rounded-lg"><img class="rounded-lg w-full"
                             src="assets/images/var-let-const.jpg" alt="" /></figure>
                     <div class="p-5">
@@ -69,7 +69,7 @@
 
                 <!-- card-2 -->
                 <div title="read more"
-                    class="card bg-stone-200 shadow-xl rounded-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-all max-w-sm mx-auto md:mx-0">
+                    class="card bg-stone-200 shadow-xl rounded-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-all max-w-sm mx-auto md:mx-0" id="card-2">
                     <figure class="h-48 mt-2 p-2 rounded-lg"><img class="rounded-lg w-full"
                             src="assets/images/null-undefined.png" alt="" /></figure>
                     <div class="p-5">
@@ -89,7 +89,7 @@
 
                 <!-- card-3 -->
                 <div title="read more"
-                    class="card bg-stone-200 shadow-xl rounded-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-all max-w-sm mx-auto md:mx-0">
+                    class="card bg-stone-200 shadow-xl rounded-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-all max-w-sm mx-auto md:mx-0" id="card-3">
                     <figure class="h-48 mt-2 p-2 rounded-lg"><img class="rounded-lg w-full" src="assets/images/rest.png"
                             alt="" /></figure>
                     <div class="p-5">
@@ -110,8 +110,8 @@
         </section>
 
         <!-- blog-1 -->
-        <section class="hidden">
-            <h1 class="text-3xl">Scope of <span class="font-bold">var</span>, <span class="font-bold">let</span>, and
+        <section class="hidden" id="blog-1">
+            <h1 class="text-3xl mt-32">Scope of <span class="font-bold">var</span>, <span class="font-bold">let</span>, and
                 <span class="font-bold">const</span></h1>
             <div class="flex gap-2 my-10">
                 <img class="h-12 w-12 rounded-full" src="assets/images/author-img.jpg" alt="">
@@ -165,14 +165,12 @@
                     Like let declarations, const declarations can only be accessed within the block they were declared. This means that the value of a variable declared with const remains the same within its scope. It cannot be updated or re-declared.
                 </p>
             </article>
-            <button
-                class="font-bold block mx-auto bg-[#FF1F3D] text-white py-2 px-5 rounded mt-10 active:scale-95 transition-transform">Go
-                Back</button>
+            <button class="go-back font-bold block mx-auto bg-[#FF1F3D] text-white py-2 px-5 rounded mt-10 active:scale-95 transition-transform">Go Back</button>
         </section>
 
         <!-- blog-2 -->
-        <section class="hidden">
-            <h1 class="text-3xl">Use cases of <span class="font-bold">null</span> and <span
+        <section class="hidden" id="blog-2">
+            <h1 class="text-3xl mt-32">Use cases of <span class="font-bold">null</span> and <span
                     class="font-bold">undefined</span></h1>
             <div class="flex gap-2 my-10">
                 <img class="h-12 w-12 rounded-full" src="assets/images/author-img.jpg" alt="">
@@ -244,13 +242,12 @@
                 </p>
             </article>
             <button
-                class="font-bold block mx-auto bg-[#FF1F3D] text-white py-2 px-5 rounded mt-10 active:scale-95 transition-transform">Go
-                Back</button>
+                class="go-back font-bold block mx-auto bg-[#FF1F3D] text-white py-2 px-5 rounded mt-10 active:scale-95 transition-transform">Go Back</button>
         </section>
 
         <!-- blog-3 -->
-        <section class="hidden">
-            <h1 class="text-3xl">What is meant by <span class="font-bold">REST</span> API?</h1>
+        <section class="hidden" id="blog-3">
+            <h1 class="text-3xl mt-32">What is meant by <span class="font-bold">REST</span> API?</h1>
             <div class="flex gap-2 my-10">
                 <img class="h-12 w-12 rounded-full" src="assets/images/author-img.jpg" alt="">
                 <div class="text-[#17171793]">
@@ -288,10 +285,12 @@
                 </p>
             </article>
             <button
-                class="font-bold block mx-auto bg-[#FF1F3D] text-white py-2 px-5 rounded mt-10 active:scale-95 transition-transform">Go
-                Back</button>
+                class="go-back font-bold block mx-auto bg-[#FF1F3D] text-white py-2 px-5 rounded mt-10 active:scale-95 transition-transform">Go Back</button>
         </section>
     </main>
+
+    <!-- scripts -->
+    <script src="scripts/blog-function.js"></script>
 </body>
 
 </html>
