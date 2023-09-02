@@ -121,43 +121,43 @@
             </div>
             <article class="space-y-10 text-sm md:text-lg font-medium">
                 <p>
-                    One of the features that came with ES6 is the addition of let and const, which can be used for
-                    variable declaration. The question is, what makes them different from good ol' var which we've been using? If you are still not clear about this, then this article is for you. In this article, we'll discuss var, let, and const with respect to their scope.
+                    let and const keywords are one of the features that came with ES6, which can be used for
+                    variable declaration. In this article, we'll discuss var, let, and const with respect to their scope.
                 </p>
 
                 <p>
-                    Scope essentially means where these variables are available for use. var declarations are globally
-                    scoped or function/locally scoped. The scope is global when a var variable is declared outside a
+                    Scope means where these variables are available for use. var declarations are globally
+                    scoped or function scoped. The scope is global when a var variable is declared outside a
                     function. This means that any variable that is declared with var outside a function block is
-                    available for use in the whole window. var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function. To understand further, look at the example below.
+                    available for use in the whole window. var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function. Let's look at the example below.
                 </p>
 
                 <p class="font-mono text-xs md:text-base">
-                     var greeter = "hey hi"; <br>
+                    var outFunction = "hello world"; <br>
                     function newFunction() { <br>
-                    &nbsp;&nbsp;&nbsp;var hello = "hello"; <br>
+                    &nbsp;&nbsp;&nbsp;var inFunction = "hello"; <br>
                     } <br>
-                    console.log(hello); // error: hello is not defined
+                    console.log(inFunction); // error: inFunction is not defined
                 </p>
 
-                <p>We'll get an error which is as a result of hello not being available outside the function.</p>
+                <p>We'll get an error which is as a result of inFunction not being available outside the function.</p>
 
                 <p>
-                    let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so. A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block. So a variable declared in a block with let is only available for use within that block. Let me explain this with an example:
+                    let is now preferred for variable declaration. It also solves the problem with var stated above. Let's consider why this is so. A block is a chunk of code bounded by {}. So a variable declared in a block with let is only available for use within that block. Let's explain this with an example:
                 </p>
 
                 <p class="font-mono text-xs md:text-base">
-                    let greeting = "say Hi"; <br>
-                    let times = 4; <br>
-                    if (times > 3) { <br>
-                    &nbsp;&nbsp;&nbsp;let hello = "say Hello instead"; <br>
-                    &nbsp;&nbsp;&nbsp;console.log(hello);// "say Hello instead" <br>
+                    let outScope = "say Hi"; <br>
+                    let outScope2 = 4; <br>
+                    if (outScope2 > 3) { <br>
+                    &nbsp;&nbsp;&nbsp;let inScope = "say Hello instead"; <br>
+                    &nbsp;&nbsp;&nbsp;console.log(inScope);// "say Hello instead" <br>
                     } <br>
-                    console.log(hello) // hello is not defined <br>
+                    console.log(inScope) // inScope is not defined <br>
                 </p>
 
                 <p>
-                    We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because let variables are block scoped.
+                    We see that using inScope outside its block returns an error. This is because let variables are block scoped.
                 </p>
 
                 <p>
@@ -180,33 +180,31 @@
             </div>
             <article class="space-y-10 text-sm md:text-lg font-medium">
                 <p>
-                    In JavaScript undefined and null are often used interchangeably, but they have distinct meanings and use cases. Undefined represents a variable that has been declared but has not been assigned a value. Null, on the other hand, represents a deliberate absence of any object value.
+                    In JavaScript undefined and null are often used as the same, but they have distinct meanings and use cases. Undefined represents a variable that has been declared but has not been assigned a value. Null, on the other hand, represents absence of value.
                 </p>
 
                 <p>
-                    Null is a special value that is used to represent the deliberate absence of an object value. It is
+                    Null is a special value that is used to represent the absence of an value. It is
                     often used as a placeholder value when a variable or property is intentionally left empty or does
-                    not exist. Unlike undefined, null is an explicitly assigned value. In TypeScript, you can assign
-                    null to a variable or property to indicate that it has no object value. For example:
+                    not exist. Unlike undefined, null is an explicitly assigned value. In JavaScript, null can be assigned to a variable or property to indicate that it has no value. For example:
                 </p>
 
-                <p class="font-mono text-xs md:text-base">let myVar = null;</p>
+                <p class="font-mono text-xs md:text-base">let nullVar = null;</p>
 
                 <p>
-                    Null is commonly used in conditional statements or functions to check if a variable or property has
-                    been assigned a value. For example, if you have a function that expects a value but wants to handle
-                    the case where the value is not present, you can check for null:
+                    Null is commonly used in conditional statements or functions to check if a variable or property has been assigned a value. For example, if a function that expects a value but wants to handle
+                    the case where the value is not present, can be checked for null:
                 </p>
 
                 <p class="font-mono text-xs md:text-base">function printName(name = null) { <br>
                     &nbsp;&nbsp;&nbsp;if (name !== null) { <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(name); <br>
                     &nbsp;&nbsp;&nbsp;} else { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('No name provided'); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('name is not available'); <br>
                     &nbsp;&nbsp;&nbsp;} <br>
                     } <br>
                     printName('Alice'); // output: Alice <br>
-                    printName(null); // output: No name provided <br>
+                    printName(null); // output: name is not available <br>
                 </p>
 
                 <p>
@@ -220,24 +218,22 @@
                 </p>
 
                 <p class="font-mono text-xs md:text-base"> 
-                    let myVar;<br>
-                    console.log(myVar); // output: undefined
+                    let undefinedVar;<br>
+                    console.log(undefinedVar); // output: undefined
                 </p>
 
                 <p>You can also explicitly assign undefined to a variable or property:</p>
 
                 <p class="font-mono text-xs md:text-base"> 
-                    et myVar = undefined; <br>
-                    console.log(myVar); // output: undefined
+                    et undefinedVar = undefined; <br>
+                    console.log(undefinedVar); // output: undefined
                 </p>
                 <p>
-                    It's important to note that assigning undefined to a variable or property is generally considered bad practice, as it can lead to confusing and error-prone code. If you need to indicate the absence of an object value, it's better to use null, which is a more explicit and intentional value.
+                    It's important to note that assigning undefined to a variable or property is generally considered bad practice, as it can lead to confusing code. If need arises to indicate the absence of an object value, it's better to use null, which is a more explicit and intentional value.
                 </p>
 
                 <p>
-                    Overall, automatic assignment of undefined to uninitialized variables can be helpful for preventing
-                    errors and catching bugs early in development. However, it's important to handle undefined values
-                    correctly in your code and avoid using them when null is a more appropriate value.
+                    Overall, automatic assignment of undefined to uninitialized variables can be helpful for preventing errors and catching bugs early in development. However, it's important to handle undefined values correctly in your code and avoid using them when null is a more appropriate value.
                 </p>
             </article>
             <button
@@ -256,7 +252,7 @@
             </div>
             <article class="space-y-10 text-sm md:text-lg font-medium">
                 <p>
-                    Representational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services. REST API is a way of accessing web services in a simple and flexible way without having any processing.
+                    Representational State Transfer (REST) is a style that defines a set of constraints to be used for creating web services. REST API is a way of accessing web services in a simple and flexible way without having any processing.
                 </p>
 
                 <p>
